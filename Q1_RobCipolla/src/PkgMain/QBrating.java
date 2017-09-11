@@ -29,13 +29,11 @@ public class QBrating {
 		double d = 2.375 - ((INT/ATT) * 25);
 		
 		double rating = ((a+b+c+d) / 6) * 100;
-		DecimalFormat numberFormat = new DecimalFormat("#.0");
 		
 		if ((COMP/ATT)>=.775 && (YDS/ATT)>=12.5 && (TD/ATT)>=.11875 && INT == 0) {
 			rating = 158.3;
 		}
 		
-		System.out.println("The QB rating is " + numberFormat.format(rating));
-		
+		System.out.printf("The QB rating is %.1f", rating);
 	}
 }
